@@ -1,4 +1,4 @@
-## Financial data - how hard can it be?
+# Financial data - how hard can it be?
 
 I've worked with financial data for years, and a recurring theme is that it is harder than it initially appears. Once you start to scratch the surface, it quickly becomes apparent that financial data is far, far from simple. 
 
@@ -21,7 +21,7 @@ Well, lets examine what these values actually mean.
 
 Firstly, we need to understand what a stock actually is. Then we need to understand what a price is, and how a price for a stock might actually originate, and then finally we have to understand the date part.
 
-What is a stock?
+## What is a stock?
 
 
 Essentially, a  stock is some sort of fractional ownership of a company. There are plenty of more details here, but for the purposes of this dicscussion, the stock we care about in the context of the series of prices, is a specific security. 
@@ -106,9 +106,9 @@ Where the values of for CoolStuff Inc are not available, we have used the values
 This approach allows us to create historic valuations at points in for a company that did not exist. There are many other approaches to dealing with this problem, but this is a simple approach that is in use in many enterprises.
 
 
-Prices:
+## Prices
 
-What is a price?
+### What is a price?
 
 Many of us are familiar with prices, for consumer products etc. We also understand that prices for the sam thing can change over time (petrol was chaper in the past), and we understand that the price of something can be cheaper when offered in different places and by different people. The price for one apple varies from city to city, retailer to retailer, month to month. 
 
@@ -124,6 +124,24 @@ However, many people need to know how much a given stock is worth, even if they 
 
 So, to really know what our prices series represents, we need to know where the prices came from. Were they the average of the prices seen in the market place? Were they compiled from executed prices? Were they compiled from quoted prices only? Maybe they were just made up by someone?
 
-Times:
+## Times
 
-All we showed 
+All we showed previously on our time series were dates. However, its not exactly clear what means. All that we know that is that value is somehow associated with that day in history. It could be the open, high, low, close etc. 
+
+Again, what we would ideally like to know is exactly what that point in time refers to. To do this we really again need to know what process actually originates these values.
+
+## A better way to think about things
+
+In essense we can distil the above considerations into a more general set of thoughts:
+
+When most people want to see or use a series of Stock prices, they actually want to get some way to value either the security or the company that issued it over time. To in practice do that, can take some suprisingly complex approaches. We have to truely understand what this data represents. In many cases we might need to add extra information to be able to fully understand what it means.
+
+This is not so surprising. Anything that involves large sums of money is likely to be complex, and fairly sophisticated. To try to reduce that into a simple set of dates and numbers is inevitably going to required some prior assumptions. 
+
+## So, why is so hard
+
+Any teacher will tell you that making something complicated easy to understand is not easy thing to do. 
+
+To really understand how something like a stock price series works, and where it comes from, and what things are in it, requires a detailed knowledge of the concepts and entities involved. This is not trivial.
+
+You might think that once you have read this you would know everything about this topic, but I've only really scratched the surface. 
