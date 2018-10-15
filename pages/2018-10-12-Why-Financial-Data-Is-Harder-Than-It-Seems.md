@@ -24,3 +24,10 @@ Firstly, we need to understand what a stock actually is. Then we need to underst
 What is a stock?
 
 
+Essentially, a  stock is some sort of fractional ownership of a company. There are plenty of more details here, but for the purposes of this dicscussion, the stock we care about in the context of the series of prices, is a specific security. 
+
+Stock securities are issued by a specific financial entity. So, if you own a share / stock, then you own a small part of that company, in a limited form. 
+
+However, companies can issue multiple stock lines. They can have different rules. Not only that, but the same company can at a time of their choosing, re-issue a stock line, again with different rules. Let's look at an example - the stock split.
+
+We'll a made up company called Widgets Inc. They create a stock line and issue 1 million individual shares. These are worth 100 USD each. Things go well, and the company makes good money. 
