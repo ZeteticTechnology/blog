@@ -41,3 +41,36 @@ This does not change the total value of all the shares, only the total number of
 This does have an effect on the "share price of the company", ie the actual number that is used by the market, in this case from 10000 USD tyo 1000 USD. When you call a stock broker to buy some shares in Widget Inc, you ask him or her for the price. They state "1000 USD" when previously they would say "10000 USD".
 
 If you were therefore to obtain a history of stock prices for this company, you would see a discontinuity in prices around the time of the stock split. 
+
+| Date | Price |
+|------------|------------:|
+| 2018-06-05 | 10001 |
+| 2018-06-05 | 10004 |
+| 2018-06-06 | 1002 |
+| 2018-06-07 | 1003 |
+
+If you were to run an algorithm over this series and it didn't know that there was a stock split, it might assume that the value of the company had dropped by a factor of ~10. This is not true.
+
+To counteract this, we might _adjust_ the prices older than the point of the stock split, by a factor of 10.
+
+| Date | Raw Price | Adjustment factor | Ajusted Price |
+|------------|------------|------------|------------:|
+| 2018-06-05 | 10001 | 0.1 | 1000.1 |
+| 2018-06-05 | 10004 | 0.1 | 1000.4 |
+| 2018-06-06 | 1002 | 1 | 1002 |
+| 2018-06-07 | 1003 | 1 | 1003 |
+
+Hopefully it is obvious what the above table is showing, but just to be clear:
+
+We have created the concept of a "Raw Price". This is defined as the price that was in the market _at the time_.
+
+We have created the concept of an "Adjustment Factor". That we use to align Raw prices to be comparable to the ones we see today.
+
+We have created the concept of a "Adjusted Price". This is the price series that we could use in an algorithm that doesn't know about such things like stock splits. We define the Adjusted price to be equal to the Raw Price multiplied by the Adjustment Factor.
+
+We have also populated the adjustment factor column with values that represent the stock split. We have added values of 1 to the period after the stock split, and 0.1 before.
+
+Now we can see the Adjusted Price is much more in line with the current price seen in the market.
+
+We can also see that the adjustement process works going backwards in time. We start with prices that are comparable to what we see in the market today, and then go backwards in time to adjust older prices to make them comparable to today. It is possible to do this process forwards in time, but that has its own issues that I will not go into in this article.
+
