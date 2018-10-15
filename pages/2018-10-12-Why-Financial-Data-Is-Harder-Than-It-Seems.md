@@ -30,4 +30,14 @@ Stock securities are issued by a specific financial entity. So, if you own a sha
 
 However, companies can issue multiple stock lines. They can have different rules. Not only that, but the same company can at a time of their choosing, re-issue a stock line, again with different rules. Let's look at an example - the stock split.
 
-We'll a made up company called Widgets Inc. They create a stock line and issue 1 million individual shares. These are worth 100 USD each. Things go well, and the company makes good money. 
+We'll a made up company called Widgets Inc. They create a stock line and issue 1 million individual shares. These are worth 100 USD each. Things go well, and the company makes good money. The market believes that each share is now worth 10000 USD. 
+
+The price of 10000 USD means that the smallest piece of the company anyone can buy is 10000 USD, and that is kind of a large number, given that many investors could be individuals. So, to resove this issue, the company issues a new stock line, with a target price of 1000 USD. To this, they retire the existing stock line (essentially by buying all the issueed stocks back) and issue the new line (they pay for the old shares with the new shares). This is called a stock split. 
+
+In this case, the stock is "split" 10 to 1. That is to say, that 10 new shares in new stock line are issued for each 1 share in the old stock line.
+
+This does not change the total value of all the shares, only the total number of shares.
+
+This does have an effect on the "share price of the company", ie the actual number that is used by the market, in this case from 10000 USD tyo 1000 USD. When you call a stock broker to buy some shares in Widget Inc, you ask him or her for the price. They state "1000 USD" when previously they would say "10000 USD".
+
+If you were therefore to obtain a history of stock prices for this company, you would see a discontinuity in prices around the time of the stock split. 
