@@ -74,3 +74,32 @@ Now we can see the Adjusted Price is much more in line with the current price se
 
 We can also see that the adjustement process works going backwards in time. We start with prices that are comparable to what we see in the market today, and then go backwards in time to adjust older prices to make them comparable to today. It is possible to do this process forwards in time, but that has its own issues that I will not go into in this article.
 
+Now it gets a bit more tricky.
+
+Companies can create other companies. A good example is that of a spin off. Lets say that Widgets Inc creates a brand new company from their cool stuff division. This company we can call CoolStuff Inc. CoolStuff Inc creates a stock line. It price at the moment is 500 USD.
+
+Lets say that the company came into being on the 3rd of July 2018.
+
+| Date | Price |
+|------------|------------:|
+| 2018-07-04 | 500 |
+| 2018-07-05 | 503 |
+| 2018-07-06 | 506 |
+| 2018-07-07 | 499 |
+
+Seems ok so far. But what if you wanted to run an algorthim over the series, but there isn't enough data points. You would want to extend back the series with some sort of proxy.
+
+We can do this by taking the value of Widgets Inc and then applying some sort of adjustment. This makes some sense. After CoolStuff was once a part of Widgets Inc. We might be able to make some sort of assesment that CoolStuff was around 20% of the value of Widgets Inc. 
+
+We can take a similar approach as above:
+
+
+| Date | Raw Price (CoolStuff Inc) | Raw Price (Widgets Inc) | Adjustment factor | Ajusted Price |
+|------------|------------|------------|------------|------------:|
+| 2018-06-05 | missing | 1005 | 0.2 | 201 |
+| 2018-06-05 | missing | 1010 | 0.2 | 202 |
+| 2018-06-06 | 204 | not used | 1 | 204 |
+| 2018-06-07 | 205 | not used | 1 | 205 |
+
+Where the values of for CoolStuff Inc are not available, we have used the values for Widgets Inc, and applied an ajustement factor of 0.2.
+
