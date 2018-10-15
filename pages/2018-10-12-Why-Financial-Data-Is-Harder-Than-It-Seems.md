@@ -103,3 +103,27 @@ We can take a similar approach as above:
 
 Where the values of for CoolStuff Inc are not available, we have used the values for Widgets Inc, and applied an ajustement factor of 0.2.
 
+This approach allows us to create historic valuations at points in for a company that did not exist. There are many other approaches to dealing with this problem, but this is a simple approach that is in use in many enterprises.
+
+
+Prices:
+
+What is a price?
+
+Many of us are familiar with prices, for consumer products etc. We also understand that prices for the sam thing can change over time (petrol was chaper in the past), and we understand that the price of something can be cheaper when offered in different places and by different people. The price for one apple varies from city to city, retailer to retailer, month to month. 
+
+In our time series example, we cover the time varying aspect of the price by modelling it as a series. However, we didn't specify where and how the prices originated. 
+
+We can therefore ask where did the prices originate, and how do they get determined. For most stocks, this is on an exchange. 
+
+An exchange is a market place, either in physical form, or electronic where people / companies can meet to exchange items of value. Specifically in oupr case, a stock market is where people can buy and sell stocks. For an exchange to happen, both parties have to agree on the terms if the deal. Ie, which stock, how much of it and for what price per stock.
+
+The exchange can facilitate, and record these values. In that sense, exchanges record all the prices of a given stock that were executed. We can take those prices an then use that get a sense for what the price is accross the market _on aggregate_. We might take the average of all the stock prices over a given day. This isn't the price that we might actually get if we tried to buy or sell the stock ourselves. Indeed this average price might in practise never actaully have ever been one that was executed. 
+
+However, many people need to know how much a given stock is worth, even if they ar not going to trade it. They might need to value an existing amount of stock that some owns. Therefore there is a need for prices. The exchange might offer a service where it prices the stock by using information in the market.
+
+So, to really know what our prices series represents, we need to know where the prices came from. Were they the average of the prices seen in the market place? Were they compiled from executed prices? Were they compiled from quoted prices only? Maybe they were just made up by someone?
+
+Times:
+
+All we showed 
