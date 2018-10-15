@@ -130,18 +130,37 @@ All we showed previously on our time series were dates. However, its not exactly
 
 Again, what we would ideally like to know is exactly what that point in time refers to. To do this we really again need to know what process actually originates these values.
 
+## Who processed the data
+
+Now we have another issue. It is unlikely that you as a user of the data actually recorded it yourself. Most likely you relied on someone else to record the data. In the example above, we suggested that perhaps it was the exchange. However, chances are you didn't talk to the exchange either. Most likely you received the data from some other aggregator, such as Bloomberg, or Yahoo! Finance. At no stage in that sequence of systems and orghanisation did you have a great visibility on how those values were processes / organised / labelled / stored / delievered to you. 
+
+You have to make an assumption that all these processes are correct and haven't damaged the data in some way. Perhaps data points were dropped, modified, erroneously inserted etc. The more unusual the data is, or the older it is, the more likley there is to be errors. One reason for this is that when less people use / look at data, the less likely there is to be someone who spotted a mistake. 
+
+## Data errors
+
+Even when mistakes are spotted, it is not always the case that mistakes are fixed. In some cases, data vendors won't fix data errors on principle. They state that it is an accurate representation of what the price was on their system _at the time_. This may be true but its not always very useful. 
+
+So, when you have data errors, and they are a problem for you, chances are you have to fix them yourself.
+
+Even if you do, you have to be cognicent of what downstream processes you might have to update also. Maybe, some portfolio was constructed using some bad data. Do you rebuild the portfolio?
+
+I personally suspect that many vendors are reluctant to fix data errors simply because they do not want to anger their customers by making their data _change_.
+
+
 ## A better way to think about things
 
 In essense we can distil the above considerations into a more general set of thoughts:
 
-When most people want to see or use a series of Stock prices, they actually want to get some way to value either the security or the company that issued it over time. To in practice do that, can take some suprisingly complex approaches. We have to truely understand what this data represents. In many cases we might need to add extra information to be able to fully understand what it means.
+When most people want to see or use a series of Stock prices, they actually want to get some way to value either the security or the company that issued it over time. To in practice do that, can take some suprisingly complex approaches. We have to truly understand what this data represents. In many cases we might need to add extra information to be able to fully understand what it means.
 
-This is not so surprising. Anything that involves large sums of money is likely to be complex, and fairly sophisticated. To try to reduce that into a simple set of dates and numbers is inevitably going to required some prior assumptions. 
+This is not so surprising. Anything that involves large sums of money is likely to be complex, and fairly sophisticated. To try to reduce that into a simple set of dates and numbers is inevitably going to require some prior assumptions. 
 
 ## So, why is so hard
 
-Any teacher will tell you that making something complicated easy to understand is not easy thing to do. 
+Any teacher will tell you that making something complicated easy to understand is not an easy thing to do. 
 
 To really understand how something like a stock price series works, and where it comes from, and what things are in it, requires a detailed knowledge of the concepts and entities involved. This is not trivial.
 
-You might think that once you have read this you would know everything about this topic, but I've only really scratched the surface. 
+You might think that once you have read this you would know everything about this topic, but I've only really scratched the surface. In the world of financial data, this sort thing happens all the time. All these issues affect each other and compound. To have a true mastery of financial data is not easy to achieve!
+
+
