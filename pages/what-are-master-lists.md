@@ -13,7 +13,7 @@ We can create a list of stocks that we care about as a set of records containing
 Stocks Table
 
 | Stock Ticker | Company Name |
-|------------|------------:|
+|------------|------------|
 | AAPL | Apple Inc |
 | IBM | International Business Machines Corporation |
 | MSFT | Microsoft Corporation |
